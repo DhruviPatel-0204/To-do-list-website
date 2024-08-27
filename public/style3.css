@@ -1,0 +1,125 @@
+html, body {
+    background-color: #FFDFD6;
+    margin: 0;
+    height: 100%;
+    /* width:100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#div4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    
+  }
+  ul{
+    list-style-type: none;
+  }
+  #div2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+  }
+  h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:#050C9C;
+    font-size: 4rem;
+  }
+  #list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color:#FEFFD2;
+    font-size: 25px;
+  }
+  #task{
+    
+    height: 2rem;
+    text-align: center;
+  }
+  #add{
+    
+      height: 2rem;
+      text-align: center;
+  }
+  #div3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+  }
+  /* style.css */
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  li:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  html, body {
+    background-color: #FFDFD6;
+    margin: 0;
+    height: 100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#quote {
+    color: #694F8E;
+    text-align:end;
+    font-family: cursive;
+}
+#motivation{
+    width:75%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+#div1{
+    margin:0;
+    width:25%;
+    height:100%;
+    background-color: #B692C2;
+    /* display: flex;
+    align-items: center; */
+}
+#tab1{
+    font-size:30px;
+    background-color: #E3A5C7;
+}
+#tab2{
+    font-size:30px;
+    background-color:  #E3A5C7;
+}
+
+

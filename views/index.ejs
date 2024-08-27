@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="/style1.css">
+</head>
+<body>
+    <div id="div1">
+        <form id="addUserForm" action="/new-user" method="get">
+            <input type="submit" name="add" value="Add Member" id="tab">
+        </form>
+        <br>
+        <br>
+
+    <div id="familyMembers">
+        <% users.forEach(function(user) { %>
+            <form action="/tasks/<%= user.id %>" method="get">
+                <button class="family-member" data-id="<%= user.id %>"><%= user.user_name %></button>
+                <br>
+                <br>
+            </form>
+        <% }); %>
+    </div>
+</div>
+    <div id="motivation">
+        <h1 id="quote">PRODUCTIVITY IS NEVER AN ACCIDENT. IT IS ALWAYS THE RESULT OF A COMMITMENT TO EXCELLENCE, INTELLIGENT PLANNING, AND FOCUSED EFFORT.</h1>
+    </div>
+
+</body>
+</html>

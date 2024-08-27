@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style2.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <form class="home" action="/home" method="post">
+            <input type="submit" name="GO TO HOME" value="GO TO HOME" id="tab1">
+            <label for="tab1"></label>
+            <br><br><br>
+        </form>
+        <form class="to do list" action="/pending" method="post">
+            <input type="hidden" name="user_id" value="<%= userId %>">
+            <input type="submit" name="pending" value="TO DO LIST" id="tab1">
+            <label for="tab1"></label>
+        </form>
+        <br><br>
+        <form class="completed" action="/completed" method="post">
+            <input type="hidden" name="user_id" value="<%= userId %>">
+            <input type="submit" name="completed" value="COMPLETED TASKS" id="tab2">
+            <label for="tab2"></label>
+        </form>
+    </div>
+    <div id="div4">
+        <h1>TO DO LIST</h1>
+        <br>
+        <div id="list">
+            <% if (ta && ta.length > 0) { %>
+                <ul>
+                    <% for (let i = 0; i < ta.length; i++) { %>
+                        <li data-index="<%= i %>" class="task-item">
+                            <span class="task-text"><%= ta[i] %></span>
+                            
+                            <form action="/remove" method="post" class="mark-completed-form" style="display: inline;" data-index="<%= i %>">
+                                <input type="hidden" name="index" value="<%= i %>">
+                                <input type="hidden" name="user_id" value="<%= userId %>">
+                                <button type="submit" class="tick-button">✔</button>
+                            </form>
+                        </li>
+                    <% } %>
+                </ul>
+            <% } %>
+        </div>
+        <br>
+        <div id="div2">
+            
+            <form action="/submit" method="post">
+                <input type="hidden" name="user_id" value="<%= userId %>">
+                <input type="text" id="task" name="task" placeholder="Add your task">
+                <br><br>
+                <div id="div3">
+                    <input type="submit" value="Add" id="add">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
